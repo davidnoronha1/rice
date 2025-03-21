@@ -21,6 +21,8 @@ apps/**/*.o
 !.config/awesome
 !.config/emacs
 !.config/nvim
+!.config/picom
+!.config/wezterm
 
 .config/nvim/lazy-lock.json
 scripts/*.dump

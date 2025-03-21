@@ -32,6 +32,7 @@ sudo make install
 ```
 
 ### Mkr
+**UPDATE** - You don't need this anymore, It's still in this repo but it's not used anywhere
 Mkr is my custom launcher and you'll have to build it or swap it out with rofi or the like, To build it:
 ```
 cd rice/misc/mkr

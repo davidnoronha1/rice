@@ -15,6 +15,7 @@ theme.palette = {
 	white = '#f9efee',
 	red = '#a77668',
 	blue = '#4b5c76',
+	bright_blue = std.color.rgba(100, 210, 255, 1),
 	gold = '#e3bf9f'
 }
 
@@ -24,6 +25,7 @@ theme.fg_normal = '#181818'
 theme.bg_light = '#fafafa'
 theme.bg_wall = '#f7f3e8'
 theme.fg_grey = '#b0b0b0'
+theme.transparent = std.color.rgba(255, 0, 0, 0)
 
 theme.dashboard_bg = std.color.hexa(std.color.lighten('#ffefd5', 16), 0.68)
 theme.titlebar_bg_focus = '#f3b3b4'

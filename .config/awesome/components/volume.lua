@@ -17,7 +17,7 @@ function M.update(volume)
 			{
 				{
 					widget = wibox.widget.textbox,
-					font = 'FantasqueSansM Nerd Font 16',
+					font = beautiful.font,
 					text = ' ',
 					align = 'center',
 				},
@@ -25,7 +25,7 @@ function M.update(volume)
 					{
 						widget = wibox.widget.progressbar,
 						max_value = 100,
-						color = '#f0f0f0',
+						color = beautiful.palette.black,--'#f0f0f0',
 						background_color = require('platform.stdlib').color.darken('#f0f0f0', 64),
 						value = const,
 						shape = require('platform.stdlib').rounded,

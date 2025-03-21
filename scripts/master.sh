@@ -41,7 +41,7 @@ alias vim='XTERM_VERSION= nvim'
 alias emacs='TERM=xterm-direct emacs '  # Get true color working in emacs terminal mode
 alias wget='wget --hsts-file /dev/null -c' # Disable Wget History
 alias killall='pkill'
-alias colemak="xmodmap ~/rice/scripts/xmodmap.colemak && xset r 66"
+alias colemak='setxkbmap us -variant colemak && xmodmap -e "keycode 113 = Left"'
 alias gitFixup='git commit --fixup=HEAD'    # Make a new fixup ~HEAD commit
 alias gitShallowClone='git clone --depth 1' # Clone only last commit
 alias gitS='git status --short'
@@ -55,7 +55,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export LESSHISTFILE=- # Disable Less History
 # export HISTFILE= # Disable History File
 export PATH="$PATH:$HOME/.local/bin:$HOME/.deno/bin:$HOME/Downloads/Flutter/bin:$HOME/.zig" # Path
-export PS1="\[\e]0;SH: \W\a\]\[\e[36m\]\w\[\e[m\] \[\e[32m\]->\[\e[m\] " # Prompt
+export PS1="\[\e]0;  \W\a\]\[\e[36m\]\w\[\e[m\] \[\e[32m\]->\[\e[m\] " # Prompt
 
 # Set Config Directory To Dotfiles
 # export XDG_CONFIG_HOME=$HOME/rice/.config

@@ -48,8 +48,9 @@ class MyWindow(Gtk.Window):
         self.set_type_hint(Gdk.WindowTypeHint.DIALOG)
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_decorated(False)
+        # self.maximize()
         self.set_keep_above(True)
-        self.set_default_size(1000, 500)
+        self.set_default_size(640 * 1.75, 480 * 1.75)
 
         # Load GTK CSS
         style_provider = Gtk.CssProvider()

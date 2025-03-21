@@ -6,7 +6,7 @@ return function(content)
 		visible = false,
 		ontop = true,
 		widget = content,
-		bg = beautiful.palette.white,--'#181818',
+		bg = "#f0f0f0cc",--'#181818',
 		fg = beautiful.palette.black,--'#f0f0f0',
 		type = 'splash',
 		shape = require('platform.stdlib').rounded(16),
@@ -27,6 +27,7 @@ return function(content)
 		awestore_compat = true,
 		subscribed = function(pos)
 			popup.opacity = 1 - pos
+			-- popup.bg = std.color.rgba(255, 255, 255, 1)
 		end,
 	})
 

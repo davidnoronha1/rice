@@ -37,7 +37,7 @@ vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- Ruler, Statusline & Title
 vim.opt.statusline = "::"
-vim.opt.titlestring = "NVIM: %f"
+vim.opt.titlestring = "  %t"
 vim.opt.title = true
 
 -- Colorscheme
