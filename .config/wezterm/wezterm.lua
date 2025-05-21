@@ -1,6 +1,7 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
+-- Hide scrollbar in neovim
 wezterm.on("update-right-status", function(window, pane)
     local cwd = pane:get_foreground_process_name() or ""
     local is_vim = cwd:match("vim$") or cwd:match("nvim$")

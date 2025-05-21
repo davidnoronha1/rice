@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 -- }}}
 
 local lisps = { "yuck", "fennel", "clojure", "scheme", "lisp" }
-local lsp = { "c", "rust", "rs", "typescript", "cpp", "v", "zig", "python" }
+local lsp = { "c", "rust", "rs", "typescript", "cpp", "v", "zig", "python", "go" }
 
 function getHeader()
 	local header = vim.split(
@@ -63,7 +63,7 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
 			require("nvim-treesitter.configs").setup({
-				highlight = { enable = true },
+				highlight = { enable = true, disable = { "nim" } },
 				indent = { enable = true },
 			})
 		end,
@@ -99,6 +99,7 @@ require("lazy").setup({
 				capabilities = require("cmp_nvim_lsp").default_capabilities(),
 			})
 			l.rust_analyzer.setup(c)
+			l.gopls.setup(c)
 			l.pyright.setup(c, {
 				settings = {
 					python = {

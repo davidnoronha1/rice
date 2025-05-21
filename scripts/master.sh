@@ -189,6 +189,10 @@ createDesktopFile() {
 	printf '[Desktop Entry]\nType=Application\nVersion=1.0\nName=%s\nComment=%s\nExec=%s' "$name" "$comment" "$_exec" >> "$ofile"
 }
 
+uploadFile () {
+	curl -Ffile=@"$1" https://0x0.st
+}
+
 testAwesome () {
 	 Xephyr :2 -ac -br -noreset -screen 1152x720 &
 	sleep 1

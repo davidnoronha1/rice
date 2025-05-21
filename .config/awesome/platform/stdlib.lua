@@ -360,4 +360,23 @@ function M.rounded(r, w, h)
 	end
 end
 
+function M.round_meter(color, icon)
+	return wibox.widget({
+		{
+			widget = wibox.widget.textbox,
+			text = icon,
+			font = beautiful.font,
+			align = "center",
+			forced_width = dpi(60),
+			forced_height = dpi(60),
+		},
+		border_color = "#45403d",
+		max_value = 100, -- DONT CHANGE
+		min_value = 0,
+		border_width = dpi(6),
+		color = color,
+		widget = wibox.container.radialprogressbar,
+	})
+end
+
 return M

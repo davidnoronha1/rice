@@ -46,7 +46,7 @@ local update_before_display = function(display)
 
 	for _, tag in ipairs(root.tags()) do
 		local scale = 0.18
-		local margin = 2
+		local margin = 0
 
 		local filter_for_tag = function(client, s)
 			return std.contains(client:tags(), tag)
@@ -72,9 +72,9 @@ local update_before_display = function(display)
 							-- true,
 							scale,
 							8,
-							8,
+							4,
 							1,
-							'#fdbc87',
+							'#000000aa',
 							std.color.lighten("#fdbc87", 24),
 							1,
 							'transparent',
@@ -122,6 +122,8 @@ local update_before_display = function(display)
 						self:get_children_by_id('clienticon')[1].client = c
 						-- focus the child when clienticon is clicked	
 						self:connect_signal("button::press", function()
+							-- focus the tag of the child
+							awful.tag.viewonly(c.first_tag)
 							c:emit_signal('request::activate', 'tasklist', {raise=true})
 						end)
 					end

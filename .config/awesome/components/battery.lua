@@ -1,10 +1,11 @@
 local battery_w = require('platform.libs.battery')
 
 -- require('naughty').notify({
--- 	text = require('platform.libs.inspect')(battery_w.list_devices()),
+	-- text = require('platform.libs.inspect')(battery_w.list_devices()),
 -- })
+
 local battery_widget = battery_w({
-	device_path = battery_w.list_devices()[2],
+	device_path = battery_w.list_devices()[1],
 })
 
 local battery_state_icons = {}
@@ -27,7 +28,7 @@ battery_widget:connect_signal('upower::update', function(w, device)
 		{
 			{
 				widget = wibox.widget.textbox,
-				font = 'FantasqueSansM Nerd Font 16',
+				font = beautiful.font,
 				text = is_on_battery and (battery_state_icons[device.state] or tostring(device.state)) or '󰚥 ',
 				align = 'center',
 			},
@@ -36,7 +37,7 @@ battery_widget:connect_signal('upower::update', function(w, device)
 				{
 					widget = wibox.widget.progressbar,
 					max_value = 100,
-					color = '#f0f0f0',
+					color = beautiful.theme.black,
 					background_color = require('platform.stdlib').color.darken('#f0f0f0', 64),
 					value = device.percentage,
 					shape = require('platform.stdlib').rounded,
